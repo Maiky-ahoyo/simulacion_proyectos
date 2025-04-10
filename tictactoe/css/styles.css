@@ -1,0 +1,157 @@
+body {
+    background-color: #262626;
+    font-family: 'Times New Roman', Times, serif;
+    color: #FFF;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+button {
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFF;
+    background-color: #262626;
+    border: 1px solid #FFF;
+    border-radius: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.figure-selector button {
+    background-color: #ecf0f1;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#board-container {
+    margin: 20px auto;
+    display: flex;
+    gap: 40px;
+    background-color: #676767;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.cell {
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 400px;
+}
+
+#customization {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.figure-options button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+#x1 {
+    background-image: url('../img/x1.png');
+}
+
+#x2 {
+    background-image: url('../img/x2.png');
+}
+
+#x3 {
+    background-image: url('../img/x3.png');
+}
+
+#o1 {
+    background-image: url('../img/o1.png');
+}
+
+#o2 {
+    background-image: url('../img/o2.png');
+}
+
+#o3 {
+    background-image: url('../img/o3.png');
+}
+
+.color-picker div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.color-picker button {
+    width: 96px;
+    height: 48px;
+}
+
+.color-picker input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+#game-controls button {
+    width: 160px;
+    height: 48px;
+}
+
+#info {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.winning-line {
+    background-color: var(--highlight-color) !important;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px var(--highlight-color);
+    }
+    to {
+        box-shadow: 0 0 20px var(--highlight-color);
+    }
+}

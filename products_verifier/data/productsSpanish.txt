@@ -1,0 +1,10 @@
+1,Granola,$ 34.00,granola.jpg
+2,Batido de Proteína,$ 60.00,protein_shake.png
+3,Tortitas de Arroz,$ 28.00,rice_cakes.jpg
+4,Mezcla de Nueces,$ 45.00,trail_mix.avif
+5,Batido de Fruta,$ 55.00,smoothie.jpg
+6,Chips de Verdura,$ 38.00,veggie_chips.webp
+7,Vaso de Fruta,$ 42.00,fruit_cup.png
+8,Hummus,$ 40.00,hummus.jpg
+9,Yogur Griego,$ 48.00,greek_yogurt.jpg
+10,Almendras,$ 50.00,almonds.jpg

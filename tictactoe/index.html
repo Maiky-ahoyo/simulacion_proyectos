@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <h1>Tic Tac Toe</h1>
+
+    <div id="board-container">
+      <div id="board">
+        <div class="cell" id="cell0"></div>
+        <div class="cell" id="cell1"></div>
+        <div class="cell" id="cell2"></div>
+        <div class="cell" id="cell3"></div>
+        <div class="cell" id="cell4"></div>
+        <div class="cell" id="cell5"></div>
+        <div class="cell" id="cell6"></div>
+        <div class="cell" id="cell7"></div>
+        <div class="cell" id="cell8"></div>
+      </div>
+
+      <div id="options">
+        <div id="customization">
+          <div class="figure-selector">
+            <h3>X Symbol:</h3>
+            <div class="figure-options">
+              <button
+                onclick="selectSymbol('x','./img/x1.png')"
+                id="x1"
+              ></button>
+              <button
+                onclick="selectSymbol('x','./img/x2.png')"
+                id="x2"
+              ></button>
+              <button
+                onclick="selectSymbol('x','./img/x3.png')"
+                id="x3"
+              ></button>
+            </div>
+          </div>
+
+          <div class="color-picker">
+            <h3>Board colors:</h3>
+            <div>
+              <input type="color" id="color1" value="#FEFEFE" />
+              <input type="color" id="color2" value="#FEFEFE" />
+              <button onclick="updateBoardColors()">Update</button>
+            </div>
+            <h3>Highlight color:</h3>
+            <div>
+              <input type="color" id="highlight" value="#2ECC71" />
+              <button onclick="updateHighlightColor()">Update</button>
+            </div>
+          </div>
+
+          <div class="figure-selector">
+            <h3>O Symbol:</h3>
+            <div class="figure-options">
+              <button
+                onclick="selectSymbol('o','./img/o1.png')"
+                id="o1"
+              ></button>
+              <button
+                onclick="selectSymbol('o','./img/o2.png')"
+                id="o2"
+              ></button>
+              <button
+                onclick="selectSymbol('o','./img/o3.png')"
+                id="o3"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="info">
+        <div>
+          <h3>Current time:</h3>
+          <p id="timer">0:00</p>
+        </div>
+
+        <div id="game-controls">
+          <div id="game-info">
+            <p id="turn">Current turn: <span id="current-turn">X</span></p>
+            <p id="status">Playing...</p>
+          </div>
+          <button id="reset" onclick="resetGame()">New Game</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/functions.js"></script>
+  </body>
+</html>

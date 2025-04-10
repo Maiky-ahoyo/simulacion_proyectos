@@ -1,0 +1,10 @@
+1,Granola,$ 1.95,granola.jpg
+2,Protein Shake,$ 3.45,protein_shake.png
+3,Rice Cakes,$ 1.60,rice_cakes.jpg
+4,Trail Mix,$ 2.60,trail_mix.avif
+5,Smoothie,$ 3.15,smoothie.jpg
+6,Veggie Chips,$ 2.20,veggie_chips.webp
+7, Fruit Cup,$ 2.40,fruit_cup.png
+8,Hummus,$ 2.30,hummus.jpg
+9,Greek Yogurt,$ 2.75,greek_yogurt.jpg
+10,Almonds,$ 2.85,almonds.jpg
