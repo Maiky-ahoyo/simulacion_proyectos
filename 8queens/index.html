@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8 Queens</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <div>
+      <h1>8 Queens</h1>
+      <div id="board-container">
+        <table id="board">
+          <tr>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+          </tr>
+          <tr>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+          </tr>
+          <tr>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+          </tr>
+          <tr>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+          </tr>
+          <tr>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+          </tr>
+          <tr>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+          </tr>
+          <tr>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+          </tr>
+          <tr>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+            <td onclick="showQueen(this);"></td>
+          </tr>
+        </table>
+        <div id="options">
+          <button id="reset" onclick="cleanQueens()">Reset</button>
+          <button id="solve" onclick="solveQueens()">Solve</button>
+          <div id="solution-navigation">
+            <button onclick="previousSolution()">Previous Solution</button>
+            <button onclick="nextSolution()">Next Solution</button>
+          </div>
+          <h2>Change Board Colors:</h2>
+          <div id="board-color-picker">
+            <label for="light-color">Color 1:</label>
+            <input type="color" id="color-1" value="#FECE9E" />
+            <label for="dark-color">Color 2:</label>
+            <input type="color" id="color-2" value="#D18B47" />
+            <button onclick="updateBoardColors()">Apply Colors</button>
+          </div>
+          <h2>Select a queen icon:</h2>
+          <div id="queen-picker">
+            <button id="black-queen"></button>
+            <button id="white-queen"></button>
+            <button id="cartoon-queen"></button>
+            <button id="simple-queen"></button>
+            <button id="queen-elizabeth"></button>
+          </div>
+          <h2>Select a highlight color:</h2>
+          <div id="color-picker">
+            <input type="color" id="color-input" value="#ff0000" />
+            <div id="color-info">
+              <p>HEX: <span id="hexValue">#FF0000</span></p>
+              <p>RGB: <span id="rgbValue">rgb(255, 0, 0)</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <script src="./js/functions.js"></script>
+  </footer>
+</html>
