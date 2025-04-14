@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Granola",
+    "price": "$ 34.00",
+    "image": "granola.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Batido de Proteína",
+    "price": "$ 60.00",
+    "image": "protein_shake.png"
+  },
+  {
+    "id": 3,
+    "name": "Tortitas de Arroz",
+    "price": "$ 28.00",
+    "image": "rice_cakes.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mezcla de Nueces",
+    "price": "$ 45.00",
+    "image": "trail_mix.avif"
+  },
+  {
+    "id": 5,
+    "name": "Batido de Fruta",
+    "price": "$ 55.00",
+    "image": "smoothie.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Chips de Verdura",
+    "price": "$ 38.00",
+    "image": "veggie_chips.webp"
+  },
+  {
+    "id": 7,
+    "name": "Vaso de Fruta",
+    "price": "$ 42.00",
+    "image": "fruit_cup.png"
+  },
+  {
+    "id": 8,
+    "name": "Hummus",
+    "price": "$ 40.00",
+    "image": "hummus.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Yogur Griego",
+    "price": "$ 48.00",
+    "image": "greek_yogurt.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Almendras",
+    "price": "$ 50.00",
+    "image": "almonds.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Barra Energética",
+    "price": "$ 33.00",
+    "image": "energy_bar.png"
+  },
+  {
+    "id": 12,
+    "name": "Agua de Coco",
+    "price": "$ 55.00",
+    "image": "coconut_water.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Ensalada de Quinoa",
+    "price": "$ 78.00",
+    "image": "quinoa_salad.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Mantequilla de Maní",
+    "price": "$ 57.00",
+    "image": "peanut_butter.png"
+  },
+  {
+    "id": 15,
+    "name": "Chips de Manzana",
+    "price": "$ 36.00",
+    "image": "apple_chips.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Pudín de Chía",
+    "price": "$ 66.00",
+    "image": "chia_pudding.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Chips de Betabel",
+    "price": "$ 44.00",
+    "image": "beet_chips.webp"
+  },
+  {
+    "id": 18,
+    "name": "Avena Instantánea",
+    "price": "$ 46.00",
+    "image": "oatmeal_cup.webp"
+  },
+  {
+    "id": 19,
+    "name": "Palitos de Zanahoria",
+    "price": "$ 34.00",
+    "image": "carrot_sticks.webp"
+  },
+  {
+    "id": 20,
+    "name": "Frutos Rojos",
+    "price": "$ 70.00",
+    "image": "mixed_berries.jpg"
+  }
+]

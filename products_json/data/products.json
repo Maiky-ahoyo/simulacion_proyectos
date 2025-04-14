@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Granola",
+    "price": "$ 1.95",
+    "image": "granola.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Protein Shake",
+    "price": "$ 3.45",
+    "image": "protein_shake.png"
+  },
+  {
+    "id": 3,
+    "name": "Rice Cakes",
+    "price": "$ 1.60",
+    "image": "rice_cakes.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Trail Mix",
+    "price": "$ 2.60",
+    "image": "trail_mix.avif"
+  },
+  {
+    "id": 5,
+    "name": "Smoothie",
+    "price": "$ 3.15",
+    "image": "smoothie.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Veggie Chips",
+    "price": "$ 2.20",
+    "image": "veggie_chips.webp"
+  },
+  {
+    "id": 7,
+    "name": "Fruit Cup",
+    "price": "$ 2.40",
+    "image": "fruit_cup.png"
+  },
+  {
+    "id": 8,
+    "name": "Hummus",
+    "price": "$ 2.30",
+    "image": "hummus.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Greek Yogurt",
+    "price": "$ 2.75",
+    "image": "greek_yogurt.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Almonds",
+    "price": "$ 2.85",
+    "image": "almonds.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Energy Bar",
+    "price": "$ 1.80",
+    "image": "energy_bar.png"
+  },
+  {
+    "id": 12,
+    "name": "Coconut Water",
+    "price": "$ 2.95",
+    "image": "coconut_water.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Quinoa Salad",
+    "price": "$ 4.25",
+    "image": "quinoa_salad.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Peanut Butter",
+    "price": "$ 3.10",
+    "image": "peanut_butter.png"
+  },
+  {
+    "id": 15,
+    "name": "Apple Chips",
+    "price": "$ 2.00",
+    "image": "apple_chips.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Chia Pudding",
+    "price": "$ 3.65",
+    "image": "chia_pudding.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Beet Chips",
+    "price": "$ 2.40",
+    "image": "beet_chips.webp"
+  },
+  {
+    "id": 18,
+    "name": "Oatmeal Cup",
+    "price": "$ 2.55",
+    "image": "oatmeal_cup.webp"
+  },
+  {
+    "id": 19,
+    "name": "Carrot Sticks",
+    "price": "$ 1.90",
+    "image": "carrot_sticks.webp"
+  },
+  {
+    "id": 20,
+    "name": "Mixed Berries",
+    "price": "$ 3.75",
+    "image": "mixed_berries.jpg"
+  }
+]
