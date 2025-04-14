@@ -8,3 +8,13 @@
 8,Hummus,$ 40.00,hummus.jpg
 9,Yogur Griego,$ 48.00,greek_yogurt.jpg
 10,Almendras,$ 50.00,almonds.jpg
+11,Barra Energética,$ 33.00,energy_bar.png
+12,Agua de Coco,$ 55.00,coconut_water.jpg
+13,Ensalada de Quinoa,$ 78.00,quinoa_salad.jpg
+14,Mantequilla de Maní,$ 57.00,peanut_butter.png
+15,Chips de Manzana,$ 36.00,apple_chips.jpg
+16,Pudín de Chía,$ 66.00,chia_pudding.jpg
+17,Chips de Betabel,$ 44.00,beet_chips.webp
+18,Avena Instantánea,$ 46.00,oatmeal_cup.webp
+19,Palitos de Zanahoria,$ 34.00,carrot_sticks.webp
+20,Frutos Rojos,$ 70.00,mixed_berries.jpg

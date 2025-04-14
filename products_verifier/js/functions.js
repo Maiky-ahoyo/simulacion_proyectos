@@ -1,29 +1,3 @@
-const productsSpanish = [
-  ["1", "Granola", "$ 34.00", "granola.jpg"],
-  ["2", "Batido de Proteína", "$ 60.00", "protein_shake.png"],
-  ["3", "Tortitas de Arroz", "$ 28.00", "rice_cakes.jpg"],
-  ["4", "Mezcla de Nueces", "$ 45.00", "trail_mix.avif"],
-  ["5", "Batido de Fruta", "$ 55.00", "smoothie.jpg"],
-  ["6", "Chips de Verdura", "$ 38.00", "veggie_chips.webp"],
-  ["7", "Copa de Fruta", "$ 42.00", "fruit_cup.png"],
-  ["8", "Hummus", "$ 40.00", "hummus.jpg"],
-  ["9", "Yogur Griego", "$ 48.00", "greek_yogurt.jpg"],
-  ["10", "Almendras", "$ 50.00", "almonds.jpg"],
-];
-
-const productsEnglish = [
-  ["1", "Granola", "$ 1.95", "granola.jpg"],
-  ["2", "Protein Shake", "$ 3.45", "protein_shake.png"],
-  ["3", "Rice Cakes", "$ 1.60", "rice_cakes.jpg"],
-  ["4", "Trail Mix", "$ 2.60", "trail_mix.avif"],
-  ["5", "Smoothie", "$ 3.15", "smoothie.jpg"],
-  ["6", "Veggie Chips", "$ 2.20", "veggie_chips.webp"],
-  ["7", "Fruit Cup", "$ 2.40", "fruit_cup.png"],
-  ["8", "Hummus", "$ 2.30", "hummus.jpg"],
-  ["9", "Greek Yogurt", "$ 2.75", "greek_yogurt.jpg"],
-  ["10", "Almonds", "$ 2.85", "almonds.jpg"],
-];
-
 const translations = {
   en: {
     title: "Bar Code",
@@ -31,6 +5,7 @@ const translations = {
     product: "Product",
     price: "Price",
     notFound: "Product not found",
+    products: "Load products",
   },
   es: {
     title: "Código de Barras",
@@ -38,13 +13,33 @@ const translations = {
     product: "Producto",
     price: "Precio",
     notFound: "Producto no encontrado",
+    products: "Cargar productos",
   },
 };
 
+const products = [];
 let currentLang = "en";
-let currentProducts = productsEnglish;
+const productsSpanish = [];
 let timerInterval = null;
 let code = "";
+
+function readProductsFromFile(file) {
+  const reader = new FileReader();
+
+  reader.onload = function (event) {
+    const text = event.target.result;
+    const lines = text.trim().split("\n");
+
+    products.length = 0;
+
+    for (const line of lines) {
+      const [code, name, price, image] = line.split(",");
+      products.push([code.trim(), name.trim(), price.trim(), image.trim()]);
+    }
+  };
+
+  reader.readAsText(file);
+}
 
 function startClock() {
   const timeElement = document.getElementById("date-time");
@@ -72,7 +67,6 @@ function updateTime(element) {
 
 function toggleLanguaje() {
   currentLang = currentLang === "en" ? "es" : "en";
-  currentProducts = currentLang === "en" ? productsEnglish : productsSpanish;
   localStorage.setItem(
     "toggleState",
     currentLang === "en" ? "checked" : "unchecked"
@@ -93,30 +87,31 @@ function applyLanguage() {
 
   document.getElementById("barcode-title").textContent = t.title;
   document.querySelector("#time-display h3").textContent = t.timeLabel;
+  document.getElementById("products").textContent = t.products;
 }
 
-function buscar(code) {
+function search(code) {
   const barcodeContainer = document.querySelector(".barcode-container");
-  let contenido = "";
-  let encontrado = false;
+  let content = "";
+  let found = false;
 
-  for (const producto of currentProducts) {
-    if (producto[0] === code) {
-      contenido = `
-        <h2>${translations[currentLang].product}: ${producto[1]}</h2>
-        <p>${translations[currentLang].price}: ${producto[2]}</p>
-        <img src="./img/${producto[3]}" alt="${producto[1]}" class="product-image">
+  for (const product of products) {
+    if (product[0] === code) {
+      content = `
+        <h2>${translations[currentLang].product}: ${product[1]}</h2>
+        <p>${translations[currentLang].price}: ${product[2]}</p>
+        <img src="./img/${product[3]}" alt="${product[1]}" class="product-image">
       `;
-      encontrado = true;
+      found = true;
       break;
     }
   }
 
-  if (!encontrado) {
-    contenido = `<p class="error">${translations[currentLang].notFound}</p>`;
+  if (!found) {
+    content = `<p class="error">${translations[currentLang].notFound}</p>`;
   }
 
-  barcodeContainer.innerHTML = contenido;
+  barcodeContainer.innerHTML = content;
 
   setTimeout(() => {
     barcodeContainer.innerHTML = `
@@ -127,12 +122,18 @@ function buscar(code) {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("fileInput").addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      readProductsFromFile(file);
+    }
+  });
+
   const savedLang = localStorage.getItem("toggleState");
   const savedMode = localStorage.getItem("darkmode");
 
   if (savedLang === "unchecked") {
     currentLang = "en";
-    currentProducts = productsEnglish;
   }
 
   if (savedMode === "active") {
@@ -143,7 +144,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (event.key !== "Enter") {
       code += event.key;
     } else {
-      buscar(code);
+      search(code);
       code = "";
     }
   });

@@ -8,29 +8,29 @@
   </head>
 
   <body class="darkmode">
+    <div class="character-img-1">
+      <img src="./img/gibby.png" alt="Gibby" class="character" />
+    </div>
+
+    <div class="character-img-2">
+      <img src="./img/fran.png" alt="Fran" class="character" />
+    </div>
+
     <h1>Products Verifier</h1>
 
     <div id="main-container">
       <div id="character-container">
-        <div class="character-img">
-          <img src="./img/gibby.png" alt="Gibby" class="character" />
-        </div>
-
         <div id="barcode-section">
           <div class="barcode-container">
             <img src="./img/barcode.gif" alt="Barcode" class="barcode" />
-            <h2 id="barcode-title">Bar Code</h2>
+            <h2 id="barcode-title"></h2>
           </div>
-        </div>
-
-        <div class="character-img">
-          <img src="./img/fran.png" alt="Fran" class="character" />
         </div>
       </div>
 
       <div id="controls-container">
         <div id="time-display">
-          <h3>Current Time:</h3>
+          <h3></h3>
           <p id="date-time"></p>
         </div>
 
@@ -63,6 +63,11 @@
               />
               <span class="slider"></span>
             </label>
+          </div>
+
+          <div class="toggle-group">
+            <label for="fileInput" id="products"></label>
+            <input type="file" id="fileInput" accept=".txt" />
           </div>
         </div>
       </div>
